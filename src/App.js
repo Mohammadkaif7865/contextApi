@@ -11,7 +11,7 @@ const reducerFunction = (state, action) => {
     case 'decrement':
       return {
         ...state,
-        count: state - 1
+        count: state.count - 1
       }
 
     default:
@@ -26,12 +26,12 @@ function App() {
   const [state, dispatch] = useReducer(reducerFunction, initialState);
   return (
     <div className="App">
-     <h1>Reducer Example</h1>
-     <div>
-       <p></p>
-       <button>Increment</button>
-       <button>Decrement</button>
-     </div>
+      <h1>Reducer Example</h1>
+      <div>
+        <p>{state.count}</p>
+        <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
+        <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+      </div>
     </div>
   );
 }
