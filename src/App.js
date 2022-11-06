@@ -13,6 +13,11 @@ const reducerFunction = (state, action) => {
         ...state,
         count: state.count - 1
       }
+    case 'init':
+      return {
+        ...state,
+        count: action.payload
+      }
 
     default:
       return state
@@ -28,6 +33,9 @@ function App() {
     <div className="App">
       <h1>Reducer Example</h1>
       <div>
+        <label htmlFor="intialcount">Start Count</label>
+        <input type="number" id="intialcount" value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={() => dispatch({ type: "init", payload: input })}>Intialize Counter</button>
         <p>{state.count}</p>
         <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
         <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
