@@ -13,6 +13,11 @@ const reducerFunction = (state, action) => {
         ...state,
         count: state.count - 1
       }
+    case 'incby10':
+      return {
+        ...state,
+        count: state.count  + action.payload
+      }  
     case 'init':
       return {
         ...state,
@@ -39,6 +44,7 @@ function App() {
         <p>{state.count}</p>
         <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
         <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+        <button onClick={() => dispatch({ type: "incby10" , payload: 10})}>Increment by 10</button>
       </div>
     </div>
   );
