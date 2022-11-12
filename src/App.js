@@ -1,14 +1,24 @@
 import './App.css';
 import React, { useState, useReducer } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import Home from './Components/Home';
+import Detail from './Components/Detail';
 
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
+        <nav>
+          <h1>This is the main header</h1>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/detail'>Detail</Link></li>
+          </ul>
+        </nav>
         <Switch>
-
+          <Route exact path='/' component={Home} />
+          <Route exact path='/detail' component={Detail} />
         </Switch>
       </BrowserRouter>
     </div>
