@@ -17,10 +17,12 @@ function App() {
             <li><Link to='/detail'>Detail</Link></li>
           </ul>
         </nav>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/detail' component={Detail} />
-        </Switch>
+        <AppState>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/detail' component={Detail} />
+          </Switch>
+        </AppState>
       </BrowserRouter>
     </div>
   );
