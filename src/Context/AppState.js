@@ -4,7 +4,7 @@ function AppState(props) {
     return (
         <>
             <AppContext.Provider value={{message : "This is from context"}}>
-                 {props.child}
+                 {props.children}
             </AppContext.Provider>
         </>
     )
