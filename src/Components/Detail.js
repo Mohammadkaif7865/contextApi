@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import AppContext from '../Context/App-context';
+import AppContext from '../Context/app-context';
 function Detail() {
     const { message } = useContext(AppContext);
     return (

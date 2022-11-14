@@ -27,8 +27,8 @@ function App() {
     </div>
   );
 }
-
 export default App;
+
 // ? here we go !!!1
 // const reducerFunction = (state, action) => {
 //   switch (action.type) {
@@ -68,7 +68,8 @@ export default App;
 // };
 // const [input, setInput] = useState(0);
 // const [state, dispatch] = useReducer(reducerFunction, initialState);
-{/* <h1>Reducer Example</h1>
+
+/* <h1>Reducer Example</h1>
 <div>
   <label htmlFor="intialcount">Start Count</label>
   <input type="number" id="intialcount" value={input} onChange={(e) => setInput(Number(e.target.value))} />
@@ -78,4 +79,4 @@ export default App;
   <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
   <button onClick={() => dispatch({ type: "incby10", payload: 10 })}>Increment by 10</button>
   <button onClick={() => dispatch({ type: "decby10", payload: 10 })}>Decrement by 10</button>
-</div> */}
+</div> */
