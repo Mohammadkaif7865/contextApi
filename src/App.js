@@ -3,6 +3,7 @@ import React, { useState, useReducer } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 import Detail from './Components/Detail';
+import AppState from './Context/AppState';
 
 function App() {
 
