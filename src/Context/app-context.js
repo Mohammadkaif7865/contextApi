@@ -1,3 +1,3 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
 const appContext = createContext();
 export default appContext;
