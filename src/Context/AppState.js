@@ -5,7 +5,7 @@ function AppState(props) {
     const [message2, setMessage2] = useState("Message2");
     return (
         <>
-            <AppContext.Provider value={{ message1: message1, setMessage1, setMessage2, message2: message2 }}>
+            <AppContext.Provider value={{ message1,message2 }}>
                 {props.children}
             </AppContext.Provider>
         </>
