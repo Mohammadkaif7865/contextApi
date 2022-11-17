@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useReducer } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 import Detail from './Components/Detail';
