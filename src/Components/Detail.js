@@ -1,4 +1,4 @@
-import React, { useContext,useState } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../Context/app-context';
 function Detail() {
     const { message2, setMessage2, isAuth, setIsAuth } = useContext(AppContext);
@@ -9,11 +9,13 @@ function Detail() {
             {
                 isAuth ? <button onClick={() => setIsAuth(false)}>Logout</button> : <button onClick={() => setIsAuth(true)}>Login</button>
             }
-            <form >
+
+            <div>
                 <label htmlFor="message">Message2</label>
                 <input type="text" id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-                <button onClick={() => setMessage2(message)}></button>
-            </form>
+                <button onClick={() => setMessage2(message)}>Change</button>
+            </div>
+
             <p>{message2}</p>
         </>
     )

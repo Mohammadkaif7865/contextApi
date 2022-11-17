@@ -9,11 +9,13 @@ function Home() {
       {
         isAuth ? <button onClick={() => setIsAuth(false)}>Logout</button> : <button onClick={() => setIsAuth(true)}>Login</button>
       }
-      <form >
+
+      <div>
         <label htmlFor="message">Message1</label>
         <input type="text" id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-        <button onClick={() => setMessage1(message)}></button>
-      </form>
+        <button onClick={() => setMessage1(message)}>Change</button>
+      </div>
+
       <p>{message1}</p>
     </>
   )
