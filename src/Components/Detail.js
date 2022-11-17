@@ -12,11 +12,4 @@ function Detail() {
         </>
     )
 }
-// ? this is the best color for me
-// # this is the best color for me
-// - this is the best color for me
-// * this is the best color for me
-// ! this is the best color for me
-// todo this is the best color for me
-// note this is the best color for me
 export default Detail;
