@@ -12,5 +12,5 @@ function Detail() {
         </>
     )
 }
-// ? tihs is the best color for me
+// ? this is the best color for me
 export default Detail;
