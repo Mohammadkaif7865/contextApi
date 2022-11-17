@@ -29,7 +29,7 @@ function App() {
 }
 export default App;
 
-// ? here we go !!!1
+// ? here we go !!!
 // const reducerFunction = (state, action) => {
 //   switch (action.type) {
 //     case 'increment':
