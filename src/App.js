@@ -16,12 +16,14 @@ function App() {
           <ul>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/detail'>Detail</Link></li>
+            <li><Link to='/todo'>Todo</Link></li>
           </ul>
         </nav>
         <AppState>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/detail' component={Detail} />
+            <Route exact path='/todo' component={Todo} />
           </Switch>
         </AppState>
       </BrowserRouter>
