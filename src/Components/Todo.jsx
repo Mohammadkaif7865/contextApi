@@ -2,16 +2,16 @@ import React, { useContext, useState } from 'react';
 import AppContext from '../Context/app-context';
 function Todo() {
     const [todoText, setTodoText] = useState("");
-    const { todos } = useContext(AppContext);
+    const { todos, addTodo, deleteTodo, toggleTodo } = useContext(AppContext);
     return (
         <>
-            <form>
+            <div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Task to be Done</label>
                     <input type='text' className="form-control" id="exampleInputEmail1" value={todoText} aria-describedby="emailHelp" onChange={(e) => setTodoText(e.target.value)} />
                 </div>
-                <button type="submit" className="btn btn-primary">TODO</button>
-            </form>
+                <button type="buttom" className="btn btn-primary" onClick={() => addTodo({ id: Math.floor(Math.random() * 10000), text: todoText, complete: false })}>TODO</button>
+            </div>
 
             {
                 todos.map((item, i) => {
@@ -19,8 +19,8 @@ function Todo() {
                         <div className="todoTopic">
                             <h2>{item.text}</h2>
                         </div>
-                        <button className='btn btn-success'>Completed</button>
-                        <button className='btn btn-danger'>Delete TODO</button>
+                        <button className='btn btn-success' onClick={() => toggleTodo(item.id)}>Completed</button>
+                        <button className='btn btn-danger' onClick={() => deleteTodo(item.id)}>Delete TODO</button>
                     </div>
                 })
             }
