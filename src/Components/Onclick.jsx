@@ -5,7 +5,7 @@ function Onclick() {
     return (
         <>
             <div>
-                <button className='btn btn-light' onClick={() => increamentCounter()}>Clicked {counter} number of times</button>
+                <button className='btn btn-warning' onClick={() => increamentCounter()}>Clicked {counter} number of times</button>
             </div>
         </>
     )

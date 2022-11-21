@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 import Detail from './Components/Detail';
 import Todo from './Components/Todo';
+import HigherOrdercomponent from './Components/higherOrderComponent';
 import AppState from './Context/AppState';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/detail'>Detail</Link></li>
             <li><Link to='/todo'>Todo</Link></li>
+            <li><Link to='/higherOrdercomponent'>HOC</Link></li>
           </ul>
         </nav>
         <AppState>
@@ -24,6 +26,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
+            <Route exact path='/higherOrdercomponent' component={HigherOrdercomponent} />
           </Switch>
         </AppState>
       </BrowserRouter>
