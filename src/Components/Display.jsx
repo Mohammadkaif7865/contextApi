@@ -1,7 +1,7 @@
 import React from 'react';
 import Onclick from './Onclick';
 import Hover from './Hover';
-function HigherOrderComponent() {
+function Display() {
     return (
         <>
             <Onclick />
@@ -9,4 +9,4 @@ function HigherOrderComponent() {
         </>
     )
 }
-export default HigherOrderComponent;
+export default Display;
