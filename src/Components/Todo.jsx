@@ -20,8 +20,10 @@ function Todo() {
                         <div className="todoTopic">
                             <h2 style={{ color: item.complete ? 'green' : 'red ' }}>{item.text}</h2>
                         </div>
-                        <button className='btn btn-success' onClick={() => toggleTodo(item.id)}>Completed</button>
-                        <button className='btn btn-danger' onClick={() => deleteTodo(item.id)}>Delete TODO</button>
+                        <div className="todobutton">
+                            <button className='btn btn-success' onClick={() => toggleTodo(item.id)}>Completed</button>
+                            <button className='btn btn-danger' onClick={() => deleteTodo(item.id)}>Delete TODO</button>
+                        </div>
                     </div>
                 })
             }
