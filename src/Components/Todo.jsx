@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AppContext from '../Context/app-context';
+import './todo.css';
 function Todo() {
     const [todoText, setTodoText] = useState("");
     const { todos, addTodo, deleteTodo, toggleTodo } = useContext(AppContext);
@@ -17,7 +18,7 @@ function Todo() {
                 todos.map((item, i) => {
                     return <div className="todo" key={i}>
                         <div className="todoTopic">
-                            <h2>{item.text}</h2>
+                            <h2 style={{ color: item.complete ? 'green' : 'red ' }}>{item.text}</h2>
                         </div>
                         <button className='btn btn-success' onClick={() => toggleTodo(item.id)}>Completed</button>
                         <button className='btn btn-danger' onClick={() => deleteTodo(item.id)}>Delete TODO</button>
