@@ -4,7 +4,7 @@ import reducerFunction from './todo-reducer';
 import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from './todo-action';
 function AppState(props) {
     const initialState = {
-        todos: [], // # {id: random_number , text: random_string , complete: booleans}
+        todos: [{ id: 43423, text: 'make coffee', complete: false }], // # {id: random_number , text: random_string , complete: booleans}
     }
     const [state, dispatch] = useReducer(reducerFunction, initialState);
     const [message1, setMessage1] = useState("Message1");
