@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import AppContext from '../Context/app-context';
 function Todo() {
-    const { todo, setTodo } = useContext(AppContext);
-    console.log(todo);
+    const { } = useContext(AppContext);
+  
     return (
         <>
             <h1>This is TODO page</h1>
