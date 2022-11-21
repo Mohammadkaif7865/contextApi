@@ -1,7 +1,9 @@
-import React,{useState} from 'react';
-function Hover() {
+import React, { useState } from 'react';
+import Wrapper from './Wrapper';
+function Hover(props) {
     const [counter, setCounter] = useState(0);
     const increamentCounter = () => setCounter(counter + 1);
+    console.log(props);
     return (
         <>
             <div>
@@ -10,4 +12,4 @@ function Hover() {
         </>
     )
 }
-export default Hover;
+export default Wrapper(Hover);
