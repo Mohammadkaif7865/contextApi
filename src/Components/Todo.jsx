@@ -5,10 +5,14 @@ function Todo() {
     console.log(todos);
     return (
         <>
-            <h1>This is TODO page</h1>
-            <label htmlFor="todo">TODO</label>
-            <input id='todo' type="text" />
+            <form>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">Task to be Done</label>
+                    <input type='text' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+                <button type="submit" className="btn btn-primary">TODO</button>
+            </form>
         </>
     )
-}// ? This is the end of every arguemnts
+}
 export default Todo;
