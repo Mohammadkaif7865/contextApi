@@ -9,7 +9,7 @@ import AppState from './Context/AppState';
 function App() {
 
   return (
-    <div className="App">
+    <div className="container">
       <BrowserRouter>
         <nav>
           <h1>This is the main header</h1>
