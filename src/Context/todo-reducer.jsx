@@ -2,11 +2,14 @@ import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from "./todo-action";
 const todoReducer = (state, action) => {
     switch (action.type) {
         case ADD_TODO:
-            return {}
+            return {
+                ...state,
+                todos: [...state.todos, action.payload]
+            }
         case DELETE_TODO:
-            return {}
+            return { ...state }
         case TOGGLE_TODO:
-            return {}
+            return { ...state }
 
         default:
             return state;
