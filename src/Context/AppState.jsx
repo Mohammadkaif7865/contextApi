@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from 'react';
 import AppContext from './app-context';
 import reducerFunction from './todo-reducer';
-import { ADD_TODO,TOGGLE_TODO,DELETE_TODO } from './todo-action';
+import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from './todo-action';
 function AppState(props) {
     const initialState = {
         todos: [], // # {id: random_number , text: random_string , complete: booleans}
@@ -18,15 +18,22 @@ function AppState(props) {
         })
     }
     // * Toggle todo
-    const toggleTodo = (todo) => {
+    const toggleTodo = (todoId) => {
         dispatch({
             type: TOGGLE_TODO,
+            payload: todoId
         })
     }
     // * Delete todo
+    const deleteTodo = (todoId) => {
+        dispatch({
+            type: DELETE_TODO,
+            payload: todoId
+        })
+    }
     return (
         <>
-            <AppContext.Provider value={{ setIsAuth, setMessage1, setMessage2, message1, isAuth, message2, todos: state.todos }}>
+            <AppContext.Provider value={{ setIsAuth, setMessage1, setMessage2, message1, isAuth, message2, todos: state.todos, addTodo, deleteTodo, toggleTodo }}>
                 {props.children}
             </AppContext.Provider>
         </>
