@@ -1,9 +1,11 @@
 import React from 'react';
 import Onclick from './Onclick';
+import Hover from './Hover';
 function HigherOrderComponent() {
     return (
         <>
-            <Onclick></Onclick>
+            <Onclick />
+            <Hover />
         </>
     )
 }
