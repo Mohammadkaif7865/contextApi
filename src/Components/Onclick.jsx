@@ -5,7 +5,7 @@ function Onclick(props) {
     return (
         <>
             <div>
-                <button className='btn btn-warning' onClick={() => props.increamentCounter()}>Clicked {props.counter} number of times</button>
+                <button className='btn btn-warning' onClick={() => props.increamentCounter()}>{props.name} Clicked {props.counter} number of times</button>
             </div>
         </>
     )
