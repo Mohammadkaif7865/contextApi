@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from './Wrapper';
 function Hover(props) {
- 
+    console.log(props);
     return (
         <>
             <div>

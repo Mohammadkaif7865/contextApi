@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from './Wrapper';
 function Onclick(props) {
-
+    console.log(props);
     return (
         <>
             <div>
