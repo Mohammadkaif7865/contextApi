@@ -6,6 +6,7 @@ import Detail from './Components/Detail';
 import Todo from './Components/Todo';
 import Display from './Components/Display';
 import AppState from './Context/AppState';
+import Student from './Components/Student';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <li><Link to='/detail'>Detail</Link></li>
             <li><Link to='/todo'>Todo</Link></li>
             <li><Link to='/display'>HOC</Link></li>
+            <li><Link to='/student'>Students</Link></li>
           </ul>
         </nav>
         <AppState>
@@ -27,6 +29,7 @@ function App() {
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
             <Route exact path='/display' component={Display} />
+            <Route exact path='/student' component={Student} />
           </Switch>
         </AppState>
       </BrowserRouter>
