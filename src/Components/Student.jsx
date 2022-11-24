@@ -1,22 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 function Student() {
+    const [name, setName] = useState("");
+    const [standard, setStandard] = useState("");
+    const [section, setSection] = useState("");
+    const [dob, setDob] = useState("");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let a = {
+            name,
+            standard,
+            section,
+            dob,
+        }
+        console.log(a);
+    }
     return (
         <>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" className="form-control" id="name" aria-describedby="namehelp" value={name} onChange={(e) => setName(e.target.value)} />
+                    <div id="namehelp" className="form-text">Please fill your proper info</div>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" />
+                <div className="mb-3">
+                    <label htmlFor="standard" className="form-label">Standard</label>
+                    <input type="number" className="form-control" id="standard" value={standard} onChange={(e) => setStandard(e.target.value)} />
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div className="mb-3">
+                    <label htmlFor="Section" className="form-label">Section</label>
+                    <input type="text" className="form-control" id="Section" value={section} onChange={(e) => setSection(e.target.value)} />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div className="mb-3">
+                    <label htmlFor="DOB" className="form-label">DOB</label>
+                    <input type="date" className="form-control" id="DOB" value={dob} onChange={(e) => setDob(e.target.value)} />
+                </div>
+
+                <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
         </>
     )
