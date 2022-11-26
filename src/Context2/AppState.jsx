@@ -21,9 +21,16 @@ function AppState(props) {
             payload: data
         })
     }
+    // * FEE_PAID
+    const feesPaid = (id) => {
+        dispatch({
+            type: FEE_PAID,
+            payload: id
+        })
+    }
     return (
         <>
-            <AppContext.Provider>
+            <AppContext.Provider value={{ feesPaid, addStudent, deleteStudent, students: state }}>
                 {props.children}
             </AppContext.Provider>
         </>
