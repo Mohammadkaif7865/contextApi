@@ -6,7 +6,7 @@ function Student() {
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
     const [dob, setDob] = useState("");
-    const { feePaid } = useContext(AppContext);
+    const { feesPaid } = useContext(AppContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = {
