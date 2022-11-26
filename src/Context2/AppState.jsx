@@ -7,8 +7,20 @@ function AppState(props) {
         students: [{ name: "Rohan", schoolRollNumber: "12122008rohan", class: 2, section: 'A', feesPaid: false }]
     }
     const [state, dispatch] = useReducer(reducerFunction, initialState);
-    // * FeePaid 
-
+    // * DELETE_STUDENT
+    const deleteStudent = (id) => {
+        dispatch({
+            type: DELETE_STUDENT,
+            payload: id
+        })
+    }
+    // * ADD_STUDENT
+    const addStudent = (data) => {
+        dispatch({
+            type: ADD_STUDENT,
+            payload: data
+        })
+    }
     return (
         <>
             <AppContext.Provider>
