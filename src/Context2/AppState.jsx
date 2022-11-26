@@ -30,7 +30,7 @@ function AppState(props) {
     }
     return (
         <>
-            <AppContext.Provider value={{ feesPaid, addStudent, deleteStudent, students: state }}>
+            <AppContext.Provider value={{ feesPaid, addStudent, deleteStudent, students: state.students }}>
                 {props.children}
             </AppContext.Provider>
         </>

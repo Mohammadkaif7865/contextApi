@@ -6,7 +6,7 @@ function Student() {
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
     const [dob, setDob] = useState("");
-    const { students } = useContext(AppContext);
+    const { feePaid } = useContext(AppContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = {
@@ -17,6 +17,7 @@ function Student() {
         }
         console.log(a);
     }
+
     return (
         <>
             <form onSubmit={handleSubmit}>
