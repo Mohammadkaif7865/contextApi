@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
-import AppContext from '../Context2/student-context';
+import StudentContext from '../Context2/student-context';
 
 function Student() {
     const [name, setName] = useState("");
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
     const [dob, setDob] = useState("");
-    const { addStudent } = useContext(AppContext);
+    const { addStudent } = useContext(StudentContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = {
