@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import AppContext from '../Context2/app-context';
+import AppContext from '../Context2/student-context';
 
 function Student() {
     const [name, setName] = useState("");

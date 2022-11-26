@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import AppContext from './app-context';
+import StudentContext from './student-context';
 import { DELETE_STUDENT, ADD_STUDENT, FEE_PAID } from './student-action';
 import reducerFunction from './student-reducer';
 function AppState(props) {
@@ -30,9 +30,9 @@ function AppState(props) {
     }
     return (
         <>
-            <AppContext.Provider value={{ feesPaid, addStudent, deleteStudent, students: state.students }}>
+            <StudentContext.Provider value={{ feesPaid, addStudent, deleteStudent, students: state.students }}>
                 {props.children}
-            </AppContext.Provider>
+            </StudentContext.Provider>
         </>
     )
 }
