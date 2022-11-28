@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import StudentContext from '../Context2/student-context';
+import StudentContext from '../Context/app-context';
 // # You can only create only one context in a application
 function Student() {
     const [name, setName] = useState("");
