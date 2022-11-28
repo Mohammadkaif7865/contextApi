@@ -21,6 +21,7 @@ function Student() {
     useEffect(() => console.log(students), [students])
     return (
         <>
+            <h1>This is the registration form</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
