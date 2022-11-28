@@ -56,7 +56,7 @@ function AppState(props) {
     }
     return (
         <>
-            <AppContext.Provider value={{ setIsAuth, setMessage1, setMessage2, message1, isAuth, message2, todos: state.todos, addTodo, deleteTodo, toggleTodo }}>
+            <AppContext.Provider value={{ setIsAuth, setMessage1, setMessage2, message1, isAuth, message2, todos: state.todos, addTodo, deleteTodo, toggleTodo, addStudent, deleteStudent, students: state.students, feesPaid }}>
                 {props.children}
             </AppContext.Provider>
         </>

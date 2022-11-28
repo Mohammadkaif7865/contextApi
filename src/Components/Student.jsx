@@ -15,8 +15,8 @@ function Student() {
             section,
             dob,
         }
-        console.log(a);
     }
+    console.log(addStudent);
 
     return (
         <>
