@@ -6,7 +6,7 @@ function Student() {
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
     const [dob, setDob] = useState("");
-    const { addStudent, students } = useContext(StudentContext);
+    const { addStudent, students, todos } = useContext(StudentContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = {
@@ -16,7 +16,7 @@ function Student() {
             dob,
         }
     }
-    console.log(addStudent, students);
+    console.log(todos, students);
 
     return (
         <>
