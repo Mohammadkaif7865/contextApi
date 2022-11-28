@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from "./todo-action";
+import { ADD_TODO, DELETE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, TOGGLE_TODO } from "./todo-action";
 const todoReducer = (state, action) => {
     switch (action.type) {
         case ADD_TODO:
@@ -7,16 +7,21 @@ const todoReducer = (state, action) => {
                 todos: [...state.todos, action.payload]
             }
         case DELETE_TODO:
-            return { 
+            return {
                 ...state,
-                todos: state.todos.filter((item)=> item.id !== action.payload)
-             }
+                todos: state.todos.filter((item) => item.id !== action.payload)
+            }
         case TOGGLE_TODO:
-            return { 
+            return {
                 ...state,
-                todos: state.todos.map((item)=> item.id === action.payload?{...item, complete: !item.complete}: item )
-             }
+                todos: state.todos.map((item) => item.id === action.payload ? { ...item, complete: !item.complete } : item)
+            }
+        case ADD_STUDENT:
 
+            return {
+                ...state,
+                students: [...state.students, action.payload]
+            }
         default:
             return state;
     }
