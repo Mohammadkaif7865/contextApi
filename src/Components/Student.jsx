@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import StudentContext from '../Context/app-context';
 // # You can only create only one context in a application
 function Student() {
@@ -18,7 +18,7 @@ function Student() {
         }
         addStudent(a);
     }
-    console.log(students);
+    useEffect(() => console.log(students), [students])
     return (
         <>
             <form onSubmit={handleSubmit}>
