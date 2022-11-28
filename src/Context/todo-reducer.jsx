@@ -25,7 +25,7 @@ const todoReducer = (state, action) => {
         case DELETE_STUDENT:
             return {
                 ...state,
-                students: state.students.filter((item) => item.id !== action.payload.id)
+                students: state.students.filter((item) => item.id !== action.payload)
             }
         default:
             return state;
