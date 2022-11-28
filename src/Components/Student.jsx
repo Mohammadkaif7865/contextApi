@@ -14,6 +14,7 @@ function Student() {
             standard,
             section,
             dob,
+            schoolCode: dob.split("-").join("") + name.toUpperCase() + Math.floor(Math.random() * 1000),
         }
         addStudent(a);
     }
