@@ -12,7 +12,7 @@ import StudentRegistration from './Components/StudentRegistration ';
 function App() {
 
   return (
-    <div className="container">
+    <>
       <BrowserRouter>
         <nav>
           <h1>This is the main header</h1>
@@ -36,7 +36,7 @@ function App() {
           </Switch>
         </AppState>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 export default App;
