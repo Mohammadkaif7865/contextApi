@@ -1,39 +1,40 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AppContext from '../Context/app-context';
 function Students() {
-    const { deleteStudent, feesPaid } = useContext(AppContext);
+    const { deleteStudent, feesPaid, students } = useContext(AppContext);
+    console.log(students);
     return (
         <>
             <div className="container">
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">SchoolCode</th>
                             <th scope="col">Name</th>
+                            <th scope="col">D.O.B</th>
                             <th scope="col">Class</th>
                             <th scope="col">Section</th>
+                            <th scope="col">FeeStatus</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {
+                            students.map((item, i) => <tr key={i} className={item.feesPaid ? "table-success" : "table-danger"}>
+                                <td>{item.schoolCode}</td>
+                                <td>{item.name}</td>
+                                <td>{item.dob}</td>
+                                <td>{item.standard}</td>
+                                <td>{item.section}</td>
+                                <td>{item.feesPaid ? "Paid" : "Not Paid"}</td>
+
+                            </tr>)
+                        }
                     </tbody>
                 </table>
+                <Link to="/studentRegistration" className='btn btn-primary'>
+                    Add a new Student
+                </Link>
             </div>
         </>
     )

@@ -5,7 +5,7 @@ import { ADD_TODO, TOGGLE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, DELETE_TO
 function AppState(props) {
     const initialState = {
         todos: [{ id: 43423, text: 'make coffee', complete: false }], // # {id: random_number , text: random_string , complete: booleans}
-        students: [{ name: "Rohan", schoolRollNumber: "12122008rohan", class: 2, section: 'A', feesPaid: false }]
+        students: [{ name: "Rohan", schoolCode: "12122008ROHAN", dob: '20-2-2013', standard: 2, section: 'A', feesPaid: false }]
     }
     const [state, dispatch] = useReducer(reducerFunction, initialState);
     const [message1, setMessage1] = useState("Message1");
