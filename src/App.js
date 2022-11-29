@@ -6,7 +6,7 @@ import Detail from './Components/Detail';
 import Todo from './Components/Todo';
 import Display from './Components/Display';
 import AppState from './Context/AppState';
-import Student from './Components/Student';
+import StudentRegistration from './Components/StudentRegistration ';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
             <li><Link to='/detail'>Detail</Link></li>
             <li><Link to='/todo'>Todo</Link></li>
             <li><Link to='/display'>HOC</Link></li>
-            <li><Link to='/student'>Students</Link></li>
+            <li><Link to='/studentRegistration'>Registration</Link></li>
           </ul>
         </nav>
         <AppState>
@@ -29,7 +29,7 @@ function App() {
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
             <Route exact path='/display' component={Display} />
-            <Route exact path='/student' component={Student} />
+            <Route exact path='/studentRegistration' component={StudentRegistration} />
           </Switch>
         </AppState>
       </BrowserRouter>
