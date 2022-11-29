@@ -8,7 +8,7 @@ import Display from './Components/Display';
 import AppState from './Context/AppState';
 import Example from './Components/Example';
 import StudentRegistration from './Components/StudentRegistration ';
-
+import Students from './Components/Students';
 function App() {
 
   return (
@@ -23,6 +23,7 @@ function App() {
             <li><Link to='/todo'>Todo</Link></li>
             <li><Link to='/display'>HOC</Link></li>
             <li><Link to='/studentRegistration'>Registration</Link></li>
+            <li><Link to='/students'>StudentsInfo</Link></li>
           </ul>
         </nav>
         <AppState>
@@ -31,6 +32,7 @@ function App() {
             <Route exact path='/threedimension' component={Example} />
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
+            <Route exact path='/students' component={Students} />
             <Route exact path='/display' component={Display} />
             <Route exact path='/studentRegistration' component={StudentRegistration} />
           </Switch>
