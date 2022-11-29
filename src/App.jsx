@@ -6,6 +6,7 @@ import Detail from './Components/Detail';
 import Todo from './Components/Todo';
 import Display from './Components/Display';
 import AppState from './Context/AppState';
+import Example from './Components/Example';
 import StudentRegistration from './Components/StudentRegistration ';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <h1>This is the main header</h1>
           <ul>
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/threedimension'>3D</Link></li>
             <li><Link to='/detail'>Detail</Link></li>
             <li><Link to='/todo'>Todo</Link></li>
             <li><Link to='/display'>HOC</Link></li>
@@ -26,6 +28,7 @@ function App() {
         <AppState>
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/threedimension' component={Example} />
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
             <Route exact path='/display' component={Display} />
