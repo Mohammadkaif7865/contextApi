@@ -21,7 +21,7 @@ function Student() {
     }
     useEffect(() => console.log(students), [students])
     return (
-        <>
+        <div className='container'>
             <h1>This is the registration form</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -44,7 +44,7 @@ function Student() {
 
                 <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
-        </>
+        </div>
     )
 }
 export default Student;
