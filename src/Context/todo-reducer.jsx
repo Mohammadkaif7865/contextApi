@@ -25,12 +25,12 @@ const todoReducer = (state, action) => {
         case DELETE_STUDENT:
             return {
                 ...state,
-                students: state.students.filter((item) => item.id !== action.payload)
+                students: state.students.filter((item) => item.schoolCode !== action.payload)
             }
         case FEE_PAID:
             return {
                 ...state,
-                students: state.todos.map((item) => item.id === action.payload ? { ...item, feesPaid: !item.feesPaid } : item)
+                students: state.students.map((item) => item.schoolCode === action.payload ? { ...item, feesPaid: !item.feesPaid } : item)
             }
         default:
             return state;

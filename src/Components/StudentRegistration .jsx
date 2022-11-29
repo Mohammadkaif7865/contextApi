@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import StudentContext from '../Context/app-context';
 // # You can only create only one context in a application
-function Student() {
+function Student(props) {
     const [name, setName] = useState("");
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
@@ -18,8 +18,8 @@ function Student() {
             feesPaid: false
         }
         addStudent(a);
+        props.history.push('/students');
     }
-    useEffect(() => console.log(students), [students])
     return (
         <div className='container'>
             <h1>This is the registration form</h1>
