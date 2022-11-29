@@ -4,7 +4,8 @@ function Detail() {
     const { message2, setMessage2, isAuth, setIsAuth } = useContext(AppContext);
     const [message, setMessage] = useState(message2);
     return (
-        <>
+
+        <div className="container">
             <h1 style={{ backgroundColor: isAuth ? 'green' : 'red' }} >This is the detail component</h1>
             {
                 isAuth ? <button onClick={() => setIsAuth(false)}>Logout</button> : <button onClick={() => setIsAuth(true)}>Login</button>
@@ -17,7 +18,7 @@ function Detail() {
             </div>
 
             <p>{message2}</p>
-        </>
+        </div>
     )
 }
 export default Detail;

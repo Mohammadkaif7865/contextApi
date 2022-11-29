@@ -4,7 +4,7 @@ function Home() {
   const { message1, isAuth, setIsAuth, setMessage1 } = useContext(AppContext);
   const [message, setMessage] = useState(message1);
   return (
-    <>
+    <div className="container">
       <h1 style={{ backgroundColor: isAuth ? "green" : "red" }}>This is Home Component</h1>
       {
         isAuth ? <button onClick={() => setIsAuth(false)}>Logout</button> : <button onClick={() => setIsAuth(true)}>Login</button>
@@ -17,7 +17,7 @@ function Home() {
       </div>
 
       <p>{message1}</p>
-    </>
+    </div>
   )
 }
 export default Home;
