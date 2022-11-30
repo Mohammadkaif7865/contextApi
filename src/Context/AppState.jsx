@@ -7,11 +7,16 @@ function AppState(props) {
     const [students, setStudents] = useState([]);
     useEffect(() => {
         fetch(url, { method: 'GET' }).then((response) => response.json()).then((data) => setStudents(data));
+
     }, [])
-    const initialState = {
+    useEffect(() => {
+        initialState = { ...initialState, students };
+    }, [students])
+    let initialState = {
         todos: [{ id: 43423, text: 'make coffee', complete: false }], // # {id: random_number , text: random_string , complete: booleans}
         students: students
     }
+    console.log(students);
     const [state, dispatch] = useReducer(reducerFunction, initialState);
     const [message1, setMessage1] = useState("Message1");
     const [message2, setMessage2] = useState("Message2");
