@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, TOGGLE_TODO } from "./todo-action";
+import { ADD_TODO, DELETE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, TOGGLE_TODO, INITIALIZE_STUDENTS } from "./todo-action";
 const todoReducer = (state, action) => {
     switch (action.type) {
         case ADD_TODO:
@@ -15,6 +15,11 @@ const todoReducer = (state, action) => {
             return {
                 ...state,
                 todos: state.todos.map((item) => item.id === action.payload ? { ...item, complete: !item.complete } : item)
+            }
+        case INITIALIZE_STUDENTS:
+            return {
+                ...state,
+                students: [...state.students, ...action.payload]
             }
         case ADD_STUDENT:
 
