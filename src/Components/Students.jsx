@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AppContext from '../Context/app-context';
 function Students() {
     const { deleteStudent, feesPaid, students } = useContext(AppContext);
-    // console.log(students);
+    console.log(students);
     return (
         <>
             <div className="container">
