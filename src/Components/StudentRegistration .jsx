@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import StudentContext from '../Context/app-context';
 const addStudentUrl = "https://energetic-cyan-fedora.cyclic.app/addStudent";
 // # You can only create only one context in a application
@@ -7,7 +7,7 @@ function Student(props) {
     const [standard, setStandard] = useState("");
     const [section, setSection] = useState("");
     const [dob, setDob] = useState("");
-    const { addStudent, students } = useContext(StudentContext);
+    const { addStudent } = useContext(StudentContext);
     const handleSubmit = (e) => {
         e.preventDefault();
         let a = {
