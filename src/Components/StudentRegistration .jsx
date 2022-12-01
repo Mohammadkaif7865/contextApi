@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import StudentContext from '../Context/app-context';
+const addStudentUrl = "https://energetic-cyan-fedora.cyclic.app/addStudent";
 // # You can only create only one context in a application
 function Student(props) {
     const [name, setName] = useState("");
@@ -17,6 +18,12 @@ function Student(props) {
             schoolCode: dob.split("-").join("") + name.toUpperCase() + Math.floor(Math.random() * 1000),
             feesPaid: false
         }
+        fetch(addStudentUrl,
+            {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(a)
+            }).then((res) => res.json()).then((data) => console.log(data));
         addStudent(a);
         props.history.push('/students');
     }
