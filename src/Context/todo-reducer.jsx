@@ -19,7 +19,7 @@ const todoReducer = (state, action) => {
         case INITIALIZE_STUDENTS:
             return {
                 ...state,
-                students: [...state.students, ...action.payload]
+                students: state.students === action.payload ? state.students : [...state.students, ...action.payload]
             }
         case ADD_STUDENT:
 

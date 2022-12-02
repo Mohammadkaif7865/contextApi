@@ -28,7 +28,7 @@ function Students() {
                                 <td>{item.standard}</td>
                                 <td>{item.section}</td>
                                 <td>{item.feesPaid ? "Paid" : "Not Paid"}</td>
-                                <td><button className='btn btn-primary' onClick={() => feesPaid(item.schoolCode)}>Change Fee Status</button></td>
+                                <td><button className='btn btn-primary' onClick={() => feesPaid(item.schoolCode, item.feesPaid)}>Change Fee Status</button></td>
                                 <td><button className='btn btn-danger' onClick={() => deleteStudent(item.schoolCode)}>Delete Info</button></td>
                             </tr>)
                         }

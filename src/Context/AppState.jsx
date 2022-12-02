@@ -3,6 +3,7 @@ import AppContext from './app-context';
 import reducerFunction from './todo-reducer';
 import { ADD_TODO, TOGGLE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, DELETE_TODO, INITIALIZE_STUDENTS } from './todo-action';
 const url = "https://energetic-cyan-fedora.cyclic.app/getStudents";
+const Feeurl = "https://energetic-cyan-fedora.cyclic.app/changeFeestatus";
 function AppState(props) {
     const [students, setStudents] = useState([]);
     const initialState = {
@@ -34,8 +35,13 @@ function AppState(props) {
             payload: data
         })
     }
-    // * FEE_PAID
-    const feesPaid = (id) => {
+    // * FEE_PAID sdg
+    const feesPaid = (id, status) => {
+        const a = {
+            feestatus: !status
+        }
+        fetch(Feeurl, {method: "PUT",    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(a)}).then((res) => res.json()).then((data) => console.log(data));
         dispatch({
             type: FEE_PAID,
             payload: id
