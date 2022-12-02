@@ -2,8 +2,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import AppContext from './app-context';
 import reducerFunction from './todo-reducer';
 import { ADD_TODO, TOGGLE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, DELETE_TODO, INITIALIZE_STUDENTS } from './todo-action';
-const url = "https://energetic-cyan-fedora.cyclic.app/getStudents";
-const Feeurl = "https://energetic-cyan-fedora.cyclic.app/changeFeestatus";
+const url = "https://energetic-cyan-fedora.cyclic.app";
 function AppState(props) {
     const [students, setStudents] = useState([]);
     const initialState = {
@@ -21,13 +20,6 @@ function AppState(props) {
             payload: data
         })
     }
-    // * DELETE_STUDENT
-    const deleteStudent = (id) => {
-        dispatch({
-            type: DELETE_STUDENT,
-            payload: id
-        })
-    }
     // * ADD_STUDENT
     const addStudent = (data) => {
         dispatch({
@@ -35,13 +27,23 @@ function AppState(props) {
             payload: data
         })
     }
+    // * DELETE_STUDENT
+    const deleteStudent = (id) => {
+        fetch(`${url}/deleteStudent/${id}`).then((response) => response.json()).then((responseData) => console.log(responseData));
+        dispatch({
+            type: DELETE_STUDENT,
+            payload: id
+        })
+    }
     // * FEE_PAID sdg
     const feesPaid = (id, status) => {
         const a = {
             feestatus: !status
         }
-        fetch(`${Feeurl}/${id}`, {method: "PUT",    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(a)}).then((res) => res.json()).then((data) => console.log(data));
+        fetch(`${url}/changeFeestatus/${id}`, {
+            method: "PUT", headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(a)
+        }).then((res) => res.json()).then((data) => console.log(data));
         dispatch({
             type: FEE_PAID,
             payload: id
