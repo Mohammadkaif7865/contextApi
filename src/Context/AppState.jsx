@@ -29,7 +29,7 @@ function AppState(props) {
     }
     // * DELETE_STUDENT
     const deleteStudent = (id) => {
-        fetch(`${url}/deleteStudent/${id}`).then((response) => response.json()).then((responseData) => console.log(responseData));
+        fetch(`${url}/deleteStudent/${id}`, { method: 'DELETE' }).then((response) => response.json()).then((responseData) => console.log(responseData));
         dispatch({
             type: DELETE_STUDENT,
             payload: id
@@ -71,7 +71,7 @@ function AppState(props) {
         })
     }
     useEffect(() => {
-        fetch(url, { method: 'GET' }).then((response) => response.json()).then((data) => setStudents(data));
+        fetch(`${url}/getStudents`, { method: 'GET' }).then((response) => response.json()).then((data) => setStudents(data));
     }, [])
     useEffect(() => {
         initializeStudents(students);
