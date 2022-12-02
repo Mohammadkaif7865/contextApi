@@ -35,7 +35,7 @@ function AppState(props) {
             payload: id
         })
     }
-    // * FEE_PAID sdg
+    // * FEE_PAID 
     const feesPaid = (id, status) => {
         const a = {
             feestatus: !status
