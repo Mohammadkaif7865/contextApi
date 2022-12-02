@@ -40,7 +40,7 @@ function AppState(props) {
         const a = {
             feestatus: !status
         }
-        fetch(Feeurl, {method: "PUT",    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        fetch(`${Feeurl}/${id}`, {method: "PUT",    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(a)}).then((res) => res.json()).then((data) => console.log(data));
         dispatch({
             type: FEE_PAID,
