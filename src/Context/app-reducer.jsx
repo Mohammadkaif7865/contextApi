@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, TOGGLE_TODO, INITIALIZE_STUDENTS } from "./todo-action";
+import { ADD_TODO, DELETE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, TOGGLE_TODO, INITIALIZE_STUDENTS } from "./app-action";
 const todoReducer = (state, action) => {
     switch (action.type) {
         case ADD_TODO:

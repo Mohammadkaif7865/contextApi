@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useEffect } from 'react';
 import AppContext from './app-context';
-import reducerFunction from './todo-reducer';
-import { ADD_TODO, TOGGLE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, DELETE_TODO, INITIALIZE_STUDENTS } from './todo-action';
+import reducerFunction from './app-reducer';
+import { ADD_TODO, TOGGLE_TODO, ADD_STUDENT, DELETE_STUDENT, FEE_PAID, DELETE_TODO, INITIALIZE_STUDENTS } from './app-action';
 const url = "https://energetic-cyan-fedora.cyclic.app";
 function AppState(props) {
     const [students, setStudents] = useState([]);
@@ -13,7 +13,7 @@ function AppState(props) {
     const [message1, setMessage1] = useState("Message1");
     const [message2, setMessage2] = useState("Message2");
     const [isAuth, setIsAuth] = useState(true);
-    // * INITIALIZE_STUDENTS
+    // * INITIALIZE_STUDENTS 
     const initializeStudents = (data) => {
         dispatch({
             type: INITIALIZE_STUDENTS,
