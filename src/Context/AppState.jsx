@@ -13,7 +13,7 @@ function AppState(props) {
     const [message1, setMessage1] = useState("Message1");
     const [message2, setMessage2] = useState("Message2");
     const [isAuth, setIsAuth] = useState(true);
-    // * INITIALIZE_STUDENTS  
+    // * INITIALIZE_STUDENTS  d
     const initializeStudents = (data) => {
         dispatch({
             type: INITIALIZE_STUDENTS,
