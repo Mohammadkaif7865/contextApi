@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Home from './Components/Home';
 import Detail from './Components/Detail';
+import Users from './Components/Users';
 import Todo from './Components/Todo';
 import Display from './Components/Display';
 import AppState from './Context/AppState';
@@ -24,6 +25,7 @@ function App() {
             <li><Link to='/display'>HOC</Link></li>
             <li><Link to='/studentRegistration'>Registration</Link></li>
             <li><Link to='/students'>StudentsInfo</Link></li>
+            <li><Link to='users'>Users</Link></li>
           </ul>
         </nav>
         <AppState>
@@ -32,6 +34,7 @@ function App() {
             <Route exact path='/threedimension' component={Example} />
             <Route exact path='/detail' component={Detail} />
             <Route exact path='/todo' component={Todo} />
+            <Route exact path='/users' component={Users} />
             <Route exact path='/students' component={Students} />
             <Route exact path='/display' component={Display} />
             <Route exact path='/studentRegistration' component={StudentRegistration} />
