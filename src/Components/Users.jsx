@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 function Users() {
+    // this is the live url of the api
     const url = 'https://energetic-cyan-fedora.cyclic.app/users';
     let [users, setUsers] = useState('');
     useEffect(() => {
+        // api call
         fetch(url, { method: 'GET' }).then((response) => response.json()).then((data) => setUsers(data));
     }, []);
     console.log(users);
@@ -23,6 +25,7 @@ function Users() {
                 </thead>
                 <tbody>
                     {
+                        // check if data is called or not using ternary operator
                       users?   users.map((user, i) =>
                       <tr key={i}>
                           <th scope="row">{user.id}</th>
