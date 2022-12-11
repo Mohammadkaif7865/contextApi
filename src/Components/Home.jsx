@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import AppContext from '../Context/app-context';
 function Home() {
-  // just taking back date commits for 09/12/2022 and 10/12/2022
+  // just taking back date commits for 09/12/2022 and 10/12/2022 and now onwards
   const { message1, isAuth, setIsAuth, setMessage1 } = useContext(AppContext);
   const [message, setMessage] = useState(message1);
   return (
