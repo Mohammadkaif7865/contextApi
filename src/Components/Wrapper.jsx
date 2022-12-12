@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// * This is the wrapper to provide functionality to the parameter component to follow DRY (Donnot repeat yourself)
 function UpdatedComponent(OriginalComponent) {
     function NewComponent() {
         const [counter, setCounter] = useState(0);
