@@ -8,4 +8,5 @@ function UpdatedComponent(OriginalComponent) {
     }
     return NewComponent;
 }
+// ? So you pass tony stark in ironman suit he will become ironman 
 export default UpdatedComponent;
