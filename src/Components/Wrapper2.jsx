@@ -6,4 +6,5 @@ function UpdatedComponent(OriginalComponent) {
     }
     return NewComponent;
 }
+// ? Once you leaked the your secret it no longer yours haha!!
 export default UpdatedComponent;
