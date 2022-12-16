@@ -10,4 +10,5 @@ function Item(props) {
         </>
     )
 }
+// ? Only one thing to get it over that is consistancy and deriving force (internal)
 export default Wrapper2(Item);
