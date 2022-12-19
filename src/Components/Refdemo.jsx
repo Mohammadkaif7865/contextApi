@@ -15,6 +15,7 @@ function Ref() {
         if (refer) {
             refer.focus();
         }
+        console.log(inputRef);
     }, [])
     return (
         <>
