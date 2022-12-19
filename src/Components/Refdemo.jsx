@@ -15,13 +15,13 @@ function Ref() {
         if (refer) {
             refer.focus();
         }
-        console.log(inputRef);
+      
     }, [])
     return (
         <>
             <div className="container">
                 <h1>This is Ref Component</h1>
-                <input type="text" ref={inputRef} />
+                <input type="text" ref={inputRef} onChange={()=> console.log(inputRef)}/>
                 <input type="text" ref={setRef} />
                 <button onClick={handleSubmit}>Submit</button>
             </div>
