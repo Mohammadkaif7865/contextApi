@@ -3,7 +3,7 @@ import Input from './Elements/Input';
 function FocusInput(){
     let inputRef = useRef();
     useEffect(()=>{
-       inputRef.current.refShow();
+     console.log(inputRef);
     },[])
  return(
      <>
