@@ -5,7 +5,7 @@ class Input extends Component {
         this.inputRef = React.createRef()
     }
     refShow() {
-        console.log(this.inputRef.current.value);
+        console.log(this.inputRef.current.value+"Ref is called");
     }
     render() {
         return (
