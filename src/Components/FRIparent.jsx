@@ -1,8 +1,10 @@
 import React from 'react';
+import FRInput from './Elements/FRInput';
 function FRIparent() {
+    let inputRef = React.createRef();
     return (
         <>
-            <h1>This is the parent of input</h1>
+            <FRInput ref={inputRef}/>
         </>
     )
 }
