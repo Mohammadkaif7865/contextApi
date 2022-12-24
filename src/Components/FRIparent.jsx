@@ -5,6 +5,7 @@ function FRIparent() {
     return (
         <>
             <FRInput ref={inputRef}/>
+            <button>Focus On</button>
         </>
     )
 }

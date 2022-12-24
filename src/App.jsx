@@ -8,10 +8,11 @@ import Todo from './Components/Todo';
 import Display from './Components/Display';
 import AppState from './Context/AppState';
 import Example from './Components/Example';
+import FRIparent from './Components/FRIparent';
 import StudentRegistration from './Components/StudentRegistration ';
 import Students from './Components/Students';
 // import Ref from './Components/Refdemo';
-import FocusInput from './Components/FocusInput';
+// import FocusInput from './Components/FocusInput';
 function App() {
 
   return (
@@ -39,7 +40,7 @@ function App() {
             <Route exact path='/todo' component={Todo} />
             <Route exact path='/users' component={Users} />
             <Route exact path='/students' component={Students} />
-            <Route exact path='/ref' component={FocusInput} />
+            <Route exact path='/ref' component={FRIparent} />
             <Route exact path='/display' component={Display} />
             <Route exact path='/studentRegistration' component={StudentRegistration} />
           </Switch>
